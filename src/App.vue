@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <hello-world v-on:increment-counter="incrementCounter" />
+    <hello-world v-on:increment-counter="incrementCounter" some-var="success" />
     <div>{{ counter }}</div>
   </div>
 </template>

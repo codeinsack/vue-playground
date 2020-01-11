@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <hello-world v-on:increment-counter="incrementCounter" />
+    <div>{{ counter }}</div>
   </div>
 </template>
 
@@ -12,6 +13,17 @@ export default {
   name: 'app',
   components: {
     HelloWorld
+  },
+  data() {
+    return {
+      counter: 0,
+    }
+  },
+  methods: {
+    incrementCounter: function (amount) {
+      console.log('amount', amount);
+      this.counter += amount;
+    }
   }
 }
 </script>
